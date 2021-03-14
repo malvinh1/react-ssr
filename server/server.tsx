@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Response } from "express";
 import fs from "fs";
 import path from "path";
 
@@ -12,7 +12,7 @@ const PORT = 8000;
 
 const app = express();
 
-app.use("^/$", (_, res, __) => {
+app.use("^/$", (_, res: Response, __) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);

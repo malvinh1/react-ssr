@@ -1,5 +1,5 @@
 require("ignore-styles");
-require("./server.js");
+require("./server.tsx");
 
 require("@babel/register")({
   ignore: [/(node_modules)/],
